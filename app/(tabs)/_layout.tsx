@@ -40,7 +40,7 @@ const _Layout = () => {
                width: '100%',
                height: '100%',
                justifyContent: 'center',
-               alignItems: 'center',
+               alignItems: 'center',  //around 1 05 1 06 error
            },
           tabBarStyle: {
                backgroundColor: '#0f0D23',
