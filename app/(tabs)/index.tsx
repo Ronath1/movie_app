@@ -34,15 +34,6 @@ export default function Index() {
             mt-20 mb-5 mx-auto"/>
 
 
-            {moviesLoading ? (
-                <ActivityIndicator
-                    size="large",
-                    color="#0000ff",
-                    className="mt-10 self-center"
-                />
-                ) : moviesError ? (
-                    <Text>{moviesError?.message}</Text>
-            )}
 
 
             <View className="flex-1 mt-5">
