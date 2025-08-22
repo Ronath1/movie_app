@@ -1,4 +1,4 @@
-import {Image, ScrollView, Text, View} from "react-native";
+import {ActivityIndicator, Image, ScrollView, Text, View} from "react-native";
 import {images} from "@/constants/images";
 import {icons} from "@/constants/icons";
 import SearchBar from "@/components/SearchBar";
@@ -32,6 +32,18 @@ export default function Index() {
 
             <Image source={icons.logo} className="w-12 h-10
             mt-20 mb-5 mx-auto"/>
+
+
+            {moviesLoading ? (
+                <ActivityIndicator
+                    size="large",
+                    color="#0000ff",
+                    className="mt-10 self-center"
+                />
+                ) : moviesError ? (
+                    <Text>{moviesError?.message}</Text>
+            )}
+
 
             <View className="flex-1 mt-5">
                 <SearchBar
