@@ -50,6 +50,11 @@ const Search = () => {
                     <ActivityIndicator size="large" color="#0000ff"
                                        className="my-3" />
                 )}
+                {moviesError && (
+                    <Text className="text-red-500 px-5 my-3">
+                        Error: {moviesError.message}
+                        </Text>
+                )}
 
             </>
             }
