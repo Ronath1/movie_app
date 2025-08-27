@@ -18,7 +18,7 @@ const Search = () => {
         error
     } = useFetch(() => fetchMovies({
         query: searchQuery
-    }), false)
+    }), );
 
 
   return (
@@ -37,7 +37,7 @@ const Search = () => {
                 marginVertical: 16
             }}
             contentContainerStyle={{ paddingBottom: 100}}
-            ListHeaderComponent={
+             ListHeaderComponent={
             <>
                  <View className="w-full flex-row justify-center mt-20
                  items-center">
@@ -70,7 +70,9 @@ const Search = () => {
                 </Text>
                     )}
             </>
+
             }
+
         />
     </View>
   );
