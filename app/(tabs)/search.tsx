@@ -5,7 +5,7 @@ import useFetch from "@/services/useFetch";
 import {fetchMovies} from "@/services/api";
 import {icons} from "@/constants/icons";
 import SearchBar from "@/components/SearchBar";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const Search = () => {
 
@@ -15,10 +15,24 @@ const Search = () => {
     const {
         data: movies,
         loading,
-        error
+        error,
+        refetch:loadMovies,
+        reset,
     } = useFetch(() => fetchMovies({
         query: searchQuery
-    }), );
+    }), false )//there was a false here  2:03 video
+
+    useEffect(() => {
+        const timeoutId = setTimeout (async () => {
+            if (searchQuery.trim()) {
+                await loadMovies();
+            } else {
+                reset()
+            }
+        }, 500);
+
+        return () => clearTimeout(timeoutId);
+    }, [searchQuery]);
 
 
   return (
