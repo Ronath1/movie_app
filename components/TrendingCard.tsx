@@ -30,6 +30,10 @@ const TrendingCard = ({movie: {movie_id,title, poster_url
                     />
                 </MaskedView>
             </View>
+            <Text className="text-sm font-bold mt-2 text-light-200"
+            numberOfLines={2}>
+                {title}
+            </Text>
         </TouchableOpacity>
     </Link>
   )
