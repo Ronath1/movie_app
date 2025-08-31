@@ -1,3 +1,6 @@
+// error on 24 it was            throw new Error('Failed to fetch movies',response.statusText);
+//  2.33.39
+
 export const TMDB_CONFIG = {
     BASE_URL: 'https://api.themoviedb.org/3',
     API_KEY: process.env.EXPO_PUBLIC_MOVIE_API_KEY,
@@ -18,7 +21,7 @@ export const fetchMovies = async({query}: {query: string}) => {
      });
 
      if(!response.ok) {
-         throw new Error('Failed to fetch movies',response.statusText);
+         throw new Error(`Failed to fetch movies: ${response.statusText}`);
      }
 
       const data = await response.json();
