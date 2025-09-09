@@ -1,50 +1,86 @@
-# Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+# Movie Explorer App
 
-## Get started
+A **React Native + Expo Router** app to explore trending movies, search titles, and view detailed information including ratings, genres, runtime, and production details. Powered by **The Movie Database (TMDB) API**.
 
-1. Install dependencies
+## Features
+
+* Browse trending and popular movies
+* Search for specific movie titles
+* View detailed movie info: overview, genres, runtime, rating, votes, budget, revenue, and production companies
+* High-quality movie posters with interactive UI
+* Back navigation from movie details to home
+* Mobile-friendly design with Expo Router and Tailwind (NativeWind)
+
+## Tech Stack
+
+* **React Native** (with Expo)
+* **Expo Router** for navigation
+* **TypeScript**
+* **Tailwind (NativeWind)** for styling
+* **TMDB API** for movie data
+
+## Project Structure
+
+```
+app/
+ ├── (tabs)/           # Home and other tab screens
+ ├── movies/[id].tsx   # Movie details page
+ ├── _layout.tsx       # Stack navigation layout
+ └── globals.css       # Global styles
+services/
+ ├── api.ts            # API configuration and fetch functions
+ └── useFetch.ts       # Custom hook for API fetching
+constants/
+ └── icons.ts          # App icons
+```
+
+## Setup & Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/yourusername/movie-explorer.git
+   cd movie-explorer
+   ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Add your TMDB API key:
+
+   * Create a `.env` file in the root folder:
+
+     ```
+     EXPO_PUBLIC_MOVIE_API_KEY=your_tmdb_api_key
+     ```
+
+4. Run the app:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## API Reference
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+* Data fetched from **[TMDB API](https://www.themoviedb.org/documentation/api)**
+* Endpoints used:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+  * `GET /discover/movie`
+  * `GET /search/movie`
+  * `GET /movie/{id}`
 
-## Get a fresh project
+## Screenshots
 
-When you're ready, run:
+*(Add screenshots of your home screen and movie details page here)*
 
-```bash
-npm run reset-project
-```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+Would you like me to:
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. **Generate this as a ready-to-download `README.md` file**, or
+2. Just give the markdown text (like above) so you can copy-paste?
+   And should I include **your actual repository link and screenshots placeholders**?
