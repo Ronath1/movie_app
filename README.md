@@ -73,9 +73,7 @@ constants/
   * `GET /search/movie`
   * `GET /movie/{id}`
 
-## Screenshots
 
-*(Add screenshots of your home screen and movie details page here)*
 
 
 
