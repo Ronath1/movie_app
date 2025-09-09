@@ -79,8 +79,4 @@ constants/
 
 
 
-Would you like me to:
 
-1. **Generate this as a ready-to-download `README.md` file**, or
-2. Just give the markdown text (like above) so you can copy-paste?
-   And should I include **your actual repository link and screenshots placeholders**?
