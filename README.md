@@ -64,16 +64,6 @@ constants/
    npx expo start
    ```
 
-## API Reference
-
-* Data fetched from **[TMDB API](https://www.themoviedb.org/documentation/api)**
-* Endpoints used:
-
-  * `GET /discover/movie`
-  * `GET /search/movie`
-  * `GET /movie/{id}`
-
-## Screenshots
 
 
 
