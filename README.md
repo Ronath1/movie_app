@@ -74,7 +74,6 @@ constants/
   * `GET /search/movie`
   * `GET /movie/{id}`
 
-## Screenshots
 
 
 
