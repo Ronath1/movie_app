@@ -20,7 +20,7 @@ A **React Native + Expo Router** app to explore trending movies, search titles, 
 * **Tailwind (NativeWind)** for styling
 * **TMDB API** for movie data
 
-## Project Structure
+
 
 ```
 app/
